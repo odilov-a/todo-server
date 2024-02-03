@@ -5,7 +5,7 @@ exports.getAllTodos = async (req, res) => {
     const todos = await Todo.find();
     return res.json(todos);
   } catch (error) {
-    return res.status(500).json({ error: "Internal Server Error" });
+    return res.status(500).json({ error: "Internal Server Error" }); 
   }
 };
 
