@@ -19,6 +19,12 @@ mongoose
   .then(() => {
     console.log("Connected to MongoDB");
 
+    app.get("/", (req, res) => {
+      const status = {
+        Status: "Running",
+      };
+      return res.send(status);
+    });
     app.use("/api/todos", todoRoutes);
 
     app.listen(PORT, () => {
